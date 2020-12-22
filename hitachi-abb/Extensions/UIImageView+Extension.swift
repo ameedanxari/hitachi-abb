@@ -6,25 +6,25 @@
 //
 
 import UIKit
+import Kingfisher
 
 extension UIImageView {
     
     func setCustomImage(_ imgURLString: String?) {
-        self.image = UIImage(named: Global.IMAGE_PLACEHOLDER)
-        
         guard let imageURLString = imgURLString,
-            let imageURL = URL(string: imageURLString) else {
-                return
+              let imageURL = URL(string: imageURLString) else {
+            self.image = UIImage(named: Global.IMAGE_PLACEHOLDER)
+            return
         }
         
-        DispatchQueue.global().async { [weak self] in
-            let data = try? Data(contentsOf: imageURL)
-            DispatchQueue.main.async {
-                if let data = data {
-                    self?.image = UIImage(data: data)
-                }
-            }
-        }
+        self.kf.indicatorType = .activity
+        self.kf.setImage(
+            with: imageURL,
+            placeholder: UIImage(named: Global.IMAGE_PLACEHOLDER),
+            options: [
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
     }
     
 }
