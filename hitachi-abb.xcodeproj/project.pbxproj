@@ -14,6 +14,16 @@
 		E263C813259159BF001F0F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E263C811259159BF001F0F04 /* LaunchScreen.storyboard */; };
 		E263C81E259159BF001F0F04 /* hitach_abbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E263C81D259159BF001F0F04 /* hitach_abbTests.swift */; };
 		E263C829259159BF001F0F04 /* hitach_abbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E263C828259159BF001F0F04 /* hitach_abbUITests.swift */; };
+		E29D1C3725916E7A00A03599 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C3625916E7A00A03599 /* ServerManager.swift */; };
+		E29D1C3C25916EB800A03599 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C3B25916EB800A03599 /* Global.swift */; };
+		E29D1C41259172A500A03599 /* URLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C40259172A500A03599 /* URLResponse+Extension.swift */; };
+		E29D1C462591754E00A03599 /* ItunesMediaTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C452591754E00A03599 /* ItunesMediaTVCell.swift */; };
+		E29D1C4B2591764700A03599 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C4A2591764700A03599 /* UIImageView+Extension.swift */; };
+		E29D1C502591785300A03599 /* ItunesSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C4F2591785300A03599 /* ItunesSearchResponse.swift */; };
+		E29D1C552591789300A03599 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C542591789300A03599 /* Result.swift */; };
+		E29D1C5B259179DA00A03599 /* ItunesMediaTVCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C5A259179DA00A03599 /* ItunesMediaTVCellVM.swift */; };
+		E29D1C6325918ABD00A03599 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C6225918ABD00A03599 /* UIApplication+Extension.swift */; };
+		E29D1C6B25918B2700A03599 /* UtilManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29D1C6A25918B2700A03599 /* UtilManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +57,16 @@
 		E263C824259159BF001F0F04 /* hitachi-abbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hitachi-abbUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E263C828259159BF001F0F04 /* hitach_abbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitach_abbUITests.swift; sourceTree = "<group>"; };
 		E263C82A259159BF001F0F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E29D1C3625916E7A00A03599 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		E29D1C3B25916EB800A03599 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		E29D1C40259172A500A03599 /* URLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+Extension.swift"; sourceTree = "<group>"; };
+		E29D1C452591754E00A03599 /* ItunesMediaTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMediaTVCell.swift; sourceTree = "<group>"; };
+		E29D1C4A2591764700A03599 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		E29D1C4F2591785300A03599 /* ItunesSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchResponse.swift; sourceTree = "<group>"; };
+		E29D1C542591789300A03599 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E29D1C5A259179DA00A03599 /* ItunesMediaTVCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMediaTVCellVM.swift; sourceTree = "<group>"; };
+		E29D1C6225918ABD00A03599 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		E29D1C6A25918B2700A03599 /* UtilManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +117,19 @@
 		E263C805259159BD001F0F04 /* hitachi-abb */ = {
 			isa = PBXGroup;
 			children = (
+				E29D1C59259179CB00A03599 /* ViewModels */,
+				E29D1C3525916E4000A03599 /* ModelClasses */,
+				E29D1C3425916E3000A03599 /* TableViewCells */,
+				E29D1C3325916E2000A03599 /* Extensions */,
 				E263C806259159BD001F0F04 /* AppDelegate.swift */,
 				E263C80A259159BD001F0F04 /* ViewController.swift */,
 				E263C80C259159BD001F0F04 /* Main.storyboard */,
 				E263C80F259159BF001F0F04 /* Assets.xcassets */,
 				E263C811259159BF001F0F04 /* LaunchScreen.storyboard */,
 				E263C814259159BF001F0F04 /* Info.plist */,
+				E29D1C3625916E7A00A03599 /* ServerManager.swift */,
+				E29D1C3B25916EB800A03599 /* Global.swift */,
+				E29D1C6A25918B2700A03599 /* UtilManager.swift */,
 			);
 			path = "hitachi-abb";
 			sourceTree = "<group>";
@@ -123,6 +150,41 @@
 				E263C82A259159BF001F0F04 /* Info.plist */,
 			);
 			path = "hitachi-abbUITests";
+			sourceTree = "<group>";
+		};
+		E29D1C3325916E2000A03599 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E29D1C40259172A500A03599 /* URLResponse+Extension.swift */,
+				E29D1C4A2591764700A03599 /* UIImageView+Extension.swift */,
+				E29D1C6225918ABD00A03599 /* UIApplication+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E29D1C3425916E3000A03599 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E29D1C452591754E00A03599 /* ItunesMediaTVCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		E29D1C3525916E4000A03599 /* ModelClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E29D1C4F2591785300A03599 /* ItunesSearchResponse.swift */,
+				E29D1C542591789300A03599 /* Result.swift */,
+			);
+			path = ModelClasses;
+			sourceTree = "<group>";
+		};
+		E29D1C59259179CB00A03599 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E29D1C5A259179DA00A03599 /* ItunesMediaTVCellVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +317,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29D1C552591789300A03599 /* Result.swift in Sources */,
+				E29D1C6B25918B2700A03599 /* UtilManager.swift in Sources */,
+				E29D1C462591754E00A03599 /* ItunesMediaTVCell.swift in Sources */,
+				E29D1C3C25916EB800A03599 /* Global.swift in Sources */,
+				E29D1C502591785300A03599 /* ItunesSearchResponse.swift in Sources */,
+				E29D1C4B2591764700A03599 /* UIImageView+Extension.swift in Sources */,
+				E29D1C5B259179DA00A03599 /* ItunesMediaTVCellVM.swift in Sources */,
+				E29D1C41259172A500A03599 /* URLResponse+Extension.swift in Sources */,
 				E263C80B259159BD001F0F04 /* ViewController.swift in Sources */,
+				E29D1C3725916E7A00A03599 /* ServerManager.swift in Sources */,
+				E29D1C6325918ABD00A03599 /* UIApplication+Extension.swift in Sources */,
 				E263C807259159BD001F0F04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

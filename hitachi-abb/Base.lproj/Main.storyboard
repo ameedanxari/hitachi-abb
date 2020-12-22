@@ -3,35 +3,72 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="de4-zk-ZfX">
             <objects>
-                <tableViewController id="d24-hY-ruC" sceneMemberID="viewController">
+                <tableViewController id="d24-hY-ruC" customClass="ViewController" customModule="hitachi_abb" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4di-ue-lnj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="Iwc-wW-NgN">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="RfQ-tn-b2g">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="d24-hY-ruC" id="p6p-9d-SUh"/>
+                                <outlet property="delegate" destination="d24-hY-ruC" id="U7T-mG-mh7"/>
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="b0T-jt-b7C">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItunesMediaTVCell" id="b0T-jt-b7C" customClass="ItunesMediaTVCell" customModule="hitachi_abb" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b0T-jt-b7C" id="zNB-Tx-ozK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XTg-dd-nGg">
+                                            <rect key="frame" x="20" y="21.5" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="XTg-dd-nGg" secondAttribute="height" id="Ifi-61-Q5e"/>
+                                                <constraint firstAttribute="height" constant="60" id="ikV-3G-jns"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTd-ue-gmc">
+                                            <rect key="frame" x="88" y="20" width="306" height="34"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6K-RV-fCj">
+                                            <rect key="frame" x="88" y="62" width="306" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="c6K-RV-fCj" firstAttribute="leading" secondItem="TTd-ue-gmc" secondAttribute="leading" id="3cz-MP-fwu"/>
+                                        <constraint firstItem="XTg-dd-nGg" firstAttribute="centerY" secondItem="zNB-Tx-ozK" secondAttribute="centerY" id="A0X-9v-tWb"/>
+                                        <constraint firstAttribute="bottom" secondItem="c6K-RV-fCj" secondAttribute="bottom" constant="20" symbolic="YES" id="HAe-Kj-pkf"/>
+                                        <constraint firstAttribute="trailing" secondItem="TTd-ue-gmc" secondAttribute="trailing" constant="20" symbolic="YES" id="IbM-5q-6QU"/>
+                                        <constraint firstItem="c6K-RV-fCj" firstAttribute="top" secondItem="TTd-ue-gmc" secondAttribute="bottom" constant="8" symbolic="YES" id="ODm-te-VCK"/>
+                                        <constraint firstItem="TTd-ue-gmc" firstAttribute="leading" secondItem="XTg-dd-nGg" secondAttribute="trailing" constant="8" symbolic="YES" id="aaO-fS-VJ1"/>
+                                        <constraint firstItem="c6K-RV-fCj" firstAttribute="trailing" secondItem="TTd-ue-gmc" secondAttribute="trailing" id="dbP-zr-HvQ"/>
+                                        <constraint firstItem="XTg-dd-nGg" firstAttribute="leading" secondItem="zNB-Tx-ozK" secondAttribute="leading" constant="20" symbolic="YES" id="jOT-mu-Hx5"/>
+                                        <constraint firstItem="TTd-ue-gmc" firstAttribute="top" secondItem="zNB-Tx-ozK" secondAttribute="top" constant="20" symbolic="YES" id="pbt-Se-FXL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgLogo" destination="XTg-dd-nGg" id="Flg-vH-WPh"/>
+                                    <outlet property="lblSubtitle" destination="c6K-RV-fCj" id="wXC-gg-6Ba"/>
+                                    <outlet property="lblTitle" destination="TTd-ue-gmc" id="mb4-rv-mfw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
